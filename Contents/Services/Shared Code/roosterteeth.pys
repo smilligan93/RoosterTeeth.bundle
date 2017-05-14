@@ -30,3 +30,6 @@ def Login():
     except:
         Log('HTTP exception in Login')
         return None
+
+    cookies = HTTP.CookiesForURL(LOGIN_URL)
+    return cookies
